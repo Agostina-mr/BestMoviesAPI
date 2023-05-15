@@ -4,7 +4,7 @@
 	{
 		public long MovieId { get; set; }
 
-		public double Rating { get; set; }
+		public float Rating { get; set; }
 
 		public long Votes { get; set; }
 

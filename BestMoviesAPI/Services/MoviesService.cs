@@ -23,7 +23,7 @@ public class MoviesService : IMoviesService
         {
             var newAverage = ((currentRating.Rating * currentRating.Votes) + dto.Rating) /
                              (currentRating.Votes + 1);
-            currentRating.Rating = newAverage;
+            currentRating.Rating = (float)newAverage;
             currentRating.Votes += 1;
             _context.Ratings.Update(currentRating);
             await _context.SaveChangesAsync()!;

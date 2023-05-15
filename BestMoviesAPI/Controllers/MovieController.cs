@@ -15,14 +15,14 @@ public class MovieController : ControllerBase
         this.moviesService = moviesService;
     }
 
-    [HttpPost]
+    [HttpPost("Rate")]
     public async Task<OkResult> RateMovie([FromBody] RateDto dto)
     {
         await moviesService.RateMovie(dto);
         return Ok();
     }
 
-    [HttpGet]
+    [HttpGet("Details")]
     public async Task<MovieDto?> GetMovie(long movieId)
     {
         return await moviesService.GetMovie(movieId);
